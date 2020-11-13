@@ -6,7 +6,7 @@ public class LodowkaApp {
         Lodowka l1 = new Lodowka();
         Scanner input = new Scanner(System.in);
         String wybor = "";
-        while( wybor!="zamknij" ) {
+        while( !wybor.equals("zamknij") ) {
             System.out.println("Podaj jaka operacje checesz wykonać: dodaj/wez/wypisz/zamknij");
             wybor = input.nextLine();
             switch(wybor) {
@@ -19,14 +19,13 @@ public class LodowkaApp {
             case "wypisz":
                 l1.printArr();
                 break;
+            case "zamknij":
+                break;
             default:
                 System.out.println("Nieprawidłowa operacja!");
                 break;
             }
         }
-
-        l1.dodaj();
-        l1.wez();
-        l1.printArr();
+        System.out.println("Koniec działania programu");
     }
 }
